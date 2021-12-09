@@ -1,0 +1,28 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<math.h>
+int main(){
+static int matrix[5][5];
+int i,j,size,suml=0,sumr=0,res;
+         scanf("%d", &size);
+         //printf("Enter the size of the array: ");
+         //printf("\nEnter elements of the matrix below, \n");
+         for (i=0;i<size;i++){
+         for(j=0;j<size;j++){
+         //printf("Enter matrix element matrix%d%d : ", i+1,j+1 );
+          scanf("%d", &matrix[i][j]);
+           
+          if(i==j){
+                suml= suml+matrix[i][j];
+            }
+          if(i+j ==(size-1)){
+            sumr = sumr+matrix[i][j];
+            }
+        }
+   }
+            //printf("Sum of left diagonal: %d\n", sumrl); 
+   
+            // printf("Sum of Right diagonal: %d\n", sumr);
+             res=abs(suml-sumr);
+             printf("%d",res);
+}
